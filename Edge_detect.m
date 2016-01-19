@@ -4,12 +4,9 @@ function [time,weight]=Edge_detect(X,Y)
         X=X(1:end-1);
         Y=Y(1:end-1);
     end
-%     disp('wavelet transform')
-%     tic
+
     wtdata=CWT_Wavelab(Y,8,'DerGauss',2,4);
-%     toc
-%     disp('WTMM')
-%     tic
+
     maxmap=WTMM(wtdata);
 %     toc
 %     disp('SkelMap')
